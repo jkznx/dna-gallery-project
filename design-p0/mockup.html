@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DNA Gallery 3D · P0 design mockup (not the app)</title>
+<!--
+  P0 design mockup by Dr. Miranda. Standalone, not part of the app.
+  Variants via the hash:  #v=a (liquid ribbon) | #v=b (pebble/droplet chain) | #v=c (pearl-sheen ribbon)
+  Extra hash keys: phone=1 (390x844 layout), active=0..5, still=1 (freeze the breathing for screenshots), t=<seconds>
+  three.js r147 (MIT) from ../../agent-office/vendor. Fonts from ../src/fonts (OFL).
+  Open over file:// in a Chromium browser started with --allow-file-access-from-files, or any local static server.
+-->
+<style>
+@font-face{font-family:Montserrat;font-weight:100 900;src:url(../src/fonts/Montserrat.ttf) format("truetype")}
+@font-face{font-family:Caveat;font-weight:400 700;src:url(../src/fonts/Caveat.ttf) format("truetype")}
+:root{--cream:#fff6d7;--paper:#fffbee;--lavender:#dda9ef;--yellow:#f8ed94;--ink:#2d2333;--plum:#6c3e7f;--mut:#66576b;--line:#2d233326}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%;overflow:hidden}
+body{background:var(--cream);color:var(--ink);font:500 16px/1.6 Montserrat,sans-serif}
+#bg{position:fixed;inset:0;background:
+  radial-gradient(48% 60% at 72% 46%,#fffdf3 0%,#fffbee 38%,transparent 72%),
+  radial-gradient(38% 42% at 92% 12%,#efd3f6aa 0%,transparent 70%),
+  radial-gradient(40% 40% at 60% 100%,#fbf2b4aa 0%,transparent 70%),var(--cream)}
+canvas{position:fixed;inset:0;width:100vw;height:100vh;display:block}
+svg#leaders{position:fixed;inset:0;width:100vw;height:100vh;pointer-events:none}
+.ui{position:fixed;inset:0;pointer-events:none}
+.ui *{pointer-events:auto}
+/* header: same chrome as the site */
+header{position:absolute;left:80px;right:80px;top:0;height:88px;display:flex;align-items:center;gap:28px;border-bottom:1px solid var(--line)}
+.wordmark{color:inherit;text-decoration:none;font-size:36px;font-weight:700;letter-spacing:-.09em;line-height:1}
+.wordmark span{display:inline-block;color:var(--plum);font-size:32px;margin-left:5px}
+.caption{color:var(--mut);font-size:.75rem}
+nav{display:flex;gap:6px;margin-left:auto;padding:4px;border:1px solid var(--line);border-radius:99px;background:#fffbee99;backdrop-filter:blur(6px)}
+nav a{display:inline-flex;align-items:center;min-height:44px;padding:10px 25px;border-radius:99px;font-size:.8125rem;font-weight:600;color:inherit;text-decoration:none}
+nav a[aria-current=page]{background:var(--ink);color:var(--cream)}
+/* intro */
+.intro{position:absolute;left:80px;top:128px;width:470px}
+.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:.625rem;font-weight:600;margin-bottom:12px}
+h1{font-size:46px;font-weight:600;line-height:1.06;letter-spacing:-.06em}
+h1 span{color:var(--plum)}
+.intro p.copy{font-size:.875rem;line-height:1.6;max-width:380px;margin-top:14px;color:#4b3f50}
+/* callouts */
+.callout{position:absolute;text-decoration:none;color:inherit}
+.callout.small{width:84px;transform:translate(-50%,-50%)}
+.callout.small figure{background:var(--paper);padding:5px 5px 6px;border:1px solid var(--line);box-shadow:0 8px 20px #2d233314;border-radius:3px}
+.callout.small img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:2px}
+.callout.small figcaption{display:flex;gap:5px;align-items:baseline;font-size:9.5px;line-height:1.25;margin-top:5px;font-weight:600}
+.callout.small figcaption b{font-weight:600;color:var(--plum);font-size:9px}
+.callout.active{display:flex;gap:22px;align-items:flex-end}
+.callout.active figure{width:218px;flex:none;background:var(--paper);padding:9px 9px 10px;border:1px solid var(--line);border-radius:4px;box-shadow:0 28px 60px #2d233326,0 4px 12px #2d233314}
+.callout.active img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:2px}
+.active-text{width:210px;padding-bottom:4px}
+.active-text .num{font-size:.625rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--plum)}
+.active-text h2{font-size:30px;font-weight:600;letter-spacing:-.05em;line-height:1.1;margin:8px 0 6px}
+.active-text .medium{font-size:.6875rem;color:var(--mut)}
+.active-text .hand{font-family:Caveat,cursive;font-size:1.45rem;line-height:1.2;color:var(--plum);margin:12px 0 16px;transform:rotate(-2deg)}
+.view{display:inline-flex;align-items:center;gap:18px;min-height:44px;padding:10px 20px;background:var(--ink);color:var(--cream);border-radius:99px;font-size:.75rem;font-weight:500;text-decoration:none}
+/* footer controls */
+.dock{background:linear-gradient(#fff6d700,#fff6d7e6 40%);position:absolute;left:80px;right:80px;bottom:0;height:84px;display:flex;align-items:center;gap:24px;border-top:1px solid var(--line)}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:44px;padding:10px 20px;border:1px solid var(--line);border-radius:99px;background:#fffbeecc;font:600 .75rem Montserrat;color:var(--ink)}
+.picker{display:flex;gap:6px;margin:0 auto}
+.picker button{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:transparent;font:600 .6875rem Montserrat;color:var(--ink)}
+.picker button[aria-current=true]{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.pause{border-style:dashed}
+.tag{position:absolute;right:80px;top:104px;font-family:Caveat,cursive;font-size:1.25rem;color:var(--plum);transform:rotate(3deg)}
+/* phone */
+body.phone header{left:20px;right:20px;height:68px;gap:12px}
+body.phone .wordmark{font-size:28px}body.phone .wordmark span{font-size:25px}
+body.phone .caption{display:none}
+body.phone nav{gap:2px;padding:3px}
+body.phone nav a{padding:10px 14px;font-size:.6875rem}
+body.phone .intro{left:20px;top:86px;width:auto;right:20px}
+body.phone h1{font-size:28px}
+body.phone .intro p.copy{display:none}
+body.phone .eyebrow{font-size:.5625rem;margin-bottom:8px}
+body.phone .callout.active{gap:14px;align-items:center;background:#fffbeee6;border:1px solid var(--line);border-radius:18px;padding:10px;box-shadow:0 20px 40px #2d23331f;backdrop-filter:blur(8px)}
+body.phone .callout.active figure{width:96px;padding:5px;box-shadow:none}
+body.phone .active-text{width:auto;flex:1;padding:0}
+body.phone .active-text h2{font-size:22px;margin:4px 0 2px}
+body.phone .active-text .hand{display:none}
+body.phone .view{margin-top:8px;min-height:40px;padding:8px 16px}
+body.phone .dock{left:20px;right:20px;height:76px;gap:8px}
+body.phone .dock .btn{width:44px;padding:0;justify-content:center}body.phone .dock .lbl{display:none}
+body.phone .picker{gap:0}body.phone .picker button{width:34px;height:44px;border:0;border-radius:8px;font-size:.625rem;position:relative}
+body.phone .picker button[aria-current=true]{background:var(--ink)}
+body.phone .callout.dot{transform:translate(-50%,-50%);width:28px;height:28px;border-radius:50%;background:var(--paper);border:1px solid var(--ink);display:grid;place-items:center;font-size:.5625rem;font-weight:700}
+body.phone .tag{display:none}
+</style>
+</head>
+<body>
+<div id="bg"></div>
+<canvas id="gl"></canvas>
+<svg id="leaders" aria-hidden="true"></svg>
+<div class="ui">
+  <header>
+    <a class="wordmark" href="#" aria-label="DNA gallery home">dna<span aria-hidden="true">✳</span></a>
+    <span class="caption">A collection of connections.</span>
+    <nav aria-label="Main navigation"><a href="#" aria-current="page">Gallery</a><a href="#">Saved</a><a href="#">Info</a></nav>
+  </header>
+  <div class="intro">
+    <p class="eyebrow">An exploration of form &amp; feeling</p>
+    <h1>A little art.<br><span>A shared thread.</span></h1>
+    <p class="copy">Six studies. Two winding strands. Find the connections in between.</p>
+  </div>
+  <div id="callouts"></div>
+  <div class="dock">
+    <button class="btn prev" aria-label="Previous artwork"><span aria-hidden="true">←</span><span class="lbl"> Previous</span></button>
+    <div class="picker" id="picker"></div>
+    <button class="btn next" aria-label="Next artwork"><span class="lbl">Next </span><span aria-hidden="true">→</span></button>
+    <button class="btn pause" aria-pressed="false" aria-label="Pause motion"><span aria-hidden="true">❚❚</span><span class="lbl"> Pause motion</span></button>
+  </div>
+  <p class="tag" id="tag"></p>
+</div>
+<script src="../../agent-office/vendor/three.min.js"></script>
+<script>
+const Q=Object.fromEntries(location.hash.slice(1).split('&').filter(Boolean).map(p=>p.split('=')));
+const V=Q.v||'a', PHONE=Q.phone==='1', STILL=Q.still==='1', ACTIVE=+(Q.active||2), T0=+(Q.t||1.4);
+if(PHONE)document.body.classList.add('phone');
+const ART=[['soft-orbit','Soft orbit','A study of circles finding their own rhythm.'],['in-between','In between','Two shapes, a little space, and a conversation in color.'],
+ ['daylight','Daylight','A bright interruption in a quiet afternoon.'],['little-waves','Little waves','Repetition with room for a small surprise.'],
+ ['growing-room','Growing room','A botanical gesture drawn from simple shapes.'],['afterglow','Afterglow','The last warm light, held in a small frame.']];
+const NAME={a:'Option A · liquid ribbon',b:'Option B · pebble & droplet chain',c:'Option C · pearl-sheen ribbon',r:'Recommended · ribbon + droplets'};
+document.getElementById('tag').textContent=NAME[V];
+document.getElementById('picker').innerHTML=ART.map((_,i)=>`<button aria-current="${i===ACTIVE}">${String(i+1).padStart(2,'0')}</button>`).join('');
+
+// ---------------- renderer, camera, light ----------------
+const canvas=document.getElementById('gl');
+const R=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true});
+R.setPixelRatio(Math.min(devicePixelRatio,2));R.setClearColor(0,0);
+R.outputEncoding=THREE.sRGBEncoding;R.toneMapping=THREE.ACESFilmicToneMapping;R.toneMappingExposure=1.0;
+const scene=new THREE.Scene();
+const cam=new THREE.PerspectiveCamera(PHONE?34:28,1,.1,200);
+scene.add(new THREE.HemisphereLight('#fffaf0','#c9a9d3',.42));
+const key=new THREE.DirectionalLight('#fff3df',2.1);key.position.set(-7,8,9);scene.add(key);
+const rim=new THREE.DirectionalLight('#dda9ef',1.6);rim.position.set(9,3,-8);scene.add(rim);
+const fill=new THREE.DirectionalLight('#f8ed94',.45);fill.position.set(4,-8,6);scene.add(fill);
+
+// ---------------- pearl-clay material ----------------
+// cream base + a lavender-to-yellow sheen at glancing angles (top-facing -> lavender, down-facing -> yellow) + faint clay grain
+function pearl(opts={}){
+  const m=new THREE.MeshPhysicalMaterial(Object.assign({color:'#efe1c3',roughness:.62,metalness:0,sheen:.8,sheenColor:new THREE.Color('#dda9ef'),sheenRoughness:.55,clearcoat:.18,clearcoatRoughness:.5},opts.mat||{}));
+  const k=opts.sheen??.55, grain=opts.grain??.025;
+  m.onBeforeCompile=sh=>{sh.fragmentShader=sh.fragmentShader.replace('#include <dithering_fragment>',`
+    { vec3 vd=normalize(vViewPosition); float fr=pow(1.0-abs(dot(normal,vd)),2.3);
+      vec3 tint=mix(vec3(0.973,0.929,0.580),vec3(0.867,0.663,0.937),clamp(normal.y*0.6+0.5,0.0,1.0));
+      gl_FragColor.rgb=mix(gl_FragColor.rgb,tint,fr*${k.toFixed(2)});
+      float n=fract(sin(dot(floor(gl_FragCoord.xy*0.75),vec2(12.9898,78.233)))*43758.5453);
+      gl_FragColor.rgb+= (n-0.5)*${grain.toFixed(3)}; }
+    #include <dithering_fragment>`);};
+  return m;
+}
+const MAT={
+  a:{strand:pearl({sheen:.55}),rung:pearl({sheen:.45})},
+  b:{strand:pearl({sheen:.4,mat:{roughness:.7}}),rung:pearl({sheen:.5,mat:{roughness:.68}})},
+  c:{strand:pearl({sheen:.8,grain:.01,mat:{roughness:.4,clearcoat:.3,clearcoatRoughness:.45,sheen:1}}),
+     rung:pearl({sheen:.75,grain:.01,mat:{roughness:.42,clearcoat:.3,clearcoatRoughness:.45,sheen:1}})},
+  r:{strand:pearl({sheen:.68,grain:.018,mat:{roughness:.5,clearcoat:.22,clearcoatRoughness:.5}}),rung:pearl({sheen:.62,grain:.018,mat:{roughness:.55}})}
+}[V];
+const ACT_MAT=pearl({sheen:.9,mat:{color:'#ecc8f2',roughness:.5}});
+
+// ---------------- helix shape ----------------
+const H=PHONE?24:26, RAD=PHONE?1.45:1.6, PITCH=PHONE?5.6:5.4, N=520, M=28;
+const hash=k=>{const x=Math.sin(k*127.1+311.7)*43758.5453;return x-Math.floor(x);};
+// gentle S-bend of the axis + slow breathing of the radius: the "ribbon in water"
+const axisX=(y,t)=>.55*Math.sin(y*.21+t*.32)+.18*Math.sin(y*.53-t*.21);
+const axisZ=(y,t)=>.35*Math.sin(y*.17-t*.27);
+function strandP(s,k,t,out){const y=(s-.5)*H, th=y/PITCH*Math.PI*2+k*Math.PI, r=RAD*(1+.07*Math.sin(y*.45+t*.6));
+  return out.set(axisX(y,t)+r*Math.cos(th),y,axisZ(y,t)+r*Math.sin(th));}
+function axisP(s,t,out){const y=(s-.5)*H;return out.set(axisX(y,t),y,axisZ(y,t));}
+// cross-section radii (wide = along the helix axis, thin = facing outwards) per variant
+function section(s,k,t){const y=(s-.5)*H, sw=.5+.5*Math.sin(y*1.15+k*1.7+t*.55)*.75+.25*Math.sin(y*2.9-t*.4+k);
+  if(V==='a'||V==='r')return [.08+.5*sw*sw,.07+.03*sw,.6*Math.sin(y*.35+t*.2)];               // flat liquid ribbon, swelling, slow twist
+  if(V==='b'){const bead=Math.pow(Math.abs(Math.sin(y/PITCH*Math.PI*10+.6)),1.6);const r=.1+.17*bead+.03*sw;return [r,r*.92,0];} // beaded pebble string
+  return [.17+.12*sw,.12+.05*sw,.3*Math.sin(y*.25+t*.2)];                            // rounder pearl ribbon
+}
+const group=new THREE.Group();scene.add(group);
+function makeStrand(){const g=new THREE.BufferGeometry();g.setAttribute('position',new THREE.Float32BufferAttribute(new Float32Array(N*M*3),3));
+  const idx=[];for(let i=0;i<N-1;i++)for(let j=0;j<M;j++){const a=i*M+j,b=i*M+(j+1)%M,c=a+M,d=b+M;idx.push(a,c,b,b,c,d);}g.setIndex(idx);return g;}
+const strands=[0,1].map(k=>{const g=makeStrand();group.add(new THREE.Mesh(g,MAT.strand));return g;});
+const _p=new THREE.Vector3(),_q=new THREE.Vector3(),_a=new THREE.Vector3(),T=new THREE.Vector3(),Nn=new THREE.Vector3(),B=new THREE.Vector3();
+function updateStrands(t){strands.forEach((g,k)=>{const pos=g.attributes.position.array;
+  for(let i=0;i<N;i++){const s=i/(N-1),e=.5/N;strandP(s,k,t,_p);strandP(Math.min(1,s+e),k,t,_q);strandP(Math.max(0,s-e),k,t,T);T.subVectors(_q,T).normalize();
+   axisP(s,t,_a);Nn.subVectors(_p,_a);Nn.addScaledVector(T,-Nn.dot(T)).normalize();B.crossVectors(T,Nn);
+   const [wide,thin,tw]=section(s,k,t);
+   for(let j=0;j<M;j++){const f=j/M*Math.PI*2+tw,c=Math.cos(f),sn=Math.sin(f),o=(i*M+j)*3;
+    pos[o]=_p.x+Nn.x*c*thin+B.x*sn*wide;pos[o+1]=_p.y+Nn.y*c*thin+B.y*sn*wide;pos[o+2]=_p.z+Nn.z*c*thin+B.z*sn*wide;}}
+  g.attributes.position.needsUpdate=true;g.computeVertexNormals();});}
+
+// ---------------- rungs ----------------
+// a lathe profile along +y, rounded caps; prof(u) is the radius along the length (u 0..1)
+function rungGeo(prof,seg=40){const pts=[];for(let i=0;i<=seg;i++){const u=i/seg,cap=Math.pow(Math.sin(Math.PI*u),.38);pts.push(new THREE.Vector2(Math.max(1e-4,prof(u)*cap),u-.5));}return new THREE.LatheGeometry(pts,28);}
+const RUNG=[], PER_TURN=10, TURNS=H/PITCH, COUNT=Math.floor(TURNS*PER_TURN);
+const geoA=rungGeo(u=>.24*(.32+.68*Math.pow(2*u-1,2)));          // liquid filament: pinched waist, flows into the strands
+const geoB=rungGeo(u=>{const v=Math.abs(u-.5)*2;return .065+.25*Math.pow(Math.sin(Math.PI*Math.min(1,v*.94+.03)),1.15)*(1-.25*v);},64); // two droplets meeting with a little neck
+const geoC=rungGeo(u=>.27*(.7+.3*Math.pow(2*u-1,2)));          // soft pill, slight pinch
+for(let k=0;k<COUNT;k++){const s=(k+.5)/COUNT;const geo=V==='a'?geoA:(V==='b'||V==='r')?geoB:geoC;
+  const mesh=new THREE.Mesh(geo,MAT.rung);group.add(mesh);RUNG.push({s,mesh,var:.82+.36*hash(k)});}
+const up=new THREE.Vector3(0,1,0);
+function updateRungs(t){RUNG.forEach(r=>{strandP(r.s,0,t,_p);strandP(r.s,1,t,_q);const d=_q.clone().sub(_p),len=d.length();
+  r.mesh.position.copy(_p).addScaledVector(d,.5);r.mesh.quaternion.setFromUnitVectors(up,d.normalize());
+  const w=r.var*(V==='c'?1:1)*(1+.08*Math.sin(r.s*40+t*.9));r.mesh.scale.set(w,len*(V==='b'||V==='r'?.9:.96),V==='c'?w*.62:V==='a'?w*.55:w);});}
+
+// ---------------- placement and camera ----------------
+function layout(){const W=innerWidth,Hh=innerHeight;R.setSize(W,Hh,false);cam.aspect=W/Hh;cam.updateProjectionMatrix();
+  if(PHONE){cam.position.set(0,0,22);group.position.set(.3,-.6,0);group.rotation.set(.22,.35,-.16);}
+  else{cam.position.set(0,0,24);group.position.set(5.3,-.2,0);group.rotation.set(.28,.2,-.62);}}
+addEventListener('resize',layout);layout();
+
+// ---------------- artwork callouts (HTML over the canvas, with ink leader lines) ----------------
+const callouts=document.getElementById('callouts'), svg=document.getElementById('leaders');
+let anchors=null; // six rung indices
+function project(v){const p=v.clone().project(cam);return [(p.x*.5+.5)*innerWidth,(-p.y*.5+.5)*innerHeight,p.z];}
+function rungWorld(r){strandP(RUNG[r].s,0,curT,_p);strandP(RUNG[r].s,1,curT,_q);return _p.clone().lerp(_q,.5).applyMatrix4(group.matrixWorld);}
+function strandWorld(r,k){strandP(RUNG[r].s,k,curT,_p);return _p.clone().applyMatrix4(group.matrixWorld);}
+// card slots (screen px) per artwork; the active slot is where its anchor ring should land
+const SLOTS=PHONE?[[352,236],[40,318],[200,420],[352,500],[40,560],[352,600]]
+  :[[1336,196],[1352,452],[1000,392],[1214,690],[858,712],[640,560]];
+function pickAnchors(){group.updateMatrixWorld(true);const used=new Set(),out=[];
+  const pts=RUNG.map((_,i)=>project(rungWorld(i)));
+  const order=[ACTIVE,...[0,1,2,3,4,5].filter(i=>i!==ACTIVE)];const res=[];
+  order.forEach(i=>{let best=-1,bd=1e9;pts.forEach((p,r)=>{if(used.has(r)||p[0]<0||p[0]>innerWidth||p[1]<110||p[1]>innerHeight-110)return;
+    if(PHONE&&(p[0]<46||p[0]>innerWidth-46||p[1]<170||(i!==ACTIVE&&p[1]>innerHeight-260)))return;
+    for(const u of used)if(Math.hypot(pts[u][0]-p[0],pts[u][1]-p[1])<(PHONE?56:70))return;
+    const d=Math.hypot(p[0]-SLOTS[i][0],p[1]-SLOTS[i][1]);if(i!==ACTIVE&&d<(PHONE?40:105))return;if(d<bd){bd=d;best=r;}});used.add(best);res[i]=best;});
+  return res;}
+function buildCallouts(){callouts.innerHTML=ART.map(([slug,title,desc],i)=>{
+  const n=String(i+1).padStart(2,'0');
+  if(i===ACTIVE)return `<a class="callout active" id="c${i}" href="#"><figure><img src="../public/samples/${slug}.png" alt=""></figure>
+    <div class="active-text"><p class="num">${n} / 06 · Selected</p><h2>${title}</h2><p class="medium">Digital study · Sample ${n}</p><p class="hand">${desc.toLowerCase().replace(/\.$/,'')}</p><span class="view">View artwork <span aria-hidden="true">→</span></span></div></a>`;
+  if(PHONE)return `<a class="callout dot" id="c${i}" href="#" aria-label="${title}">${n}</a>`;
+  return `<a class="callout small" id="c${i}" href="#"><figure><img src="../public/samples/${slug}.png" alt=""><figcaption><b>${n}</b>${title}</figcaption></figure></a>`;}).join('');}
+buildCallouts();
+function placeCallouts(){group.updateMatrixWorld(true);if(!anchors)anchors=pickAnchors();let paths='';
+  anchors.forEach((ri,i)=>{const el=document.getElementById('c'+i);
+    // anchor on the strand nearest the camera, so the line never starts behind the helix
+    const w0=strandWorld(ri,0),w1=strandWorld(ri,1),w=w0.distanceTo(cam.position)<w1.distanceTo(cam.position)?w0:w1;
+    const [ax,ay]=project(w);
+    if(i===ACTIVE){
+      const x=PHONE?20:80, y=PHONE?innerHeight-76-14-142:356;el.style.left=x+'px';el.style.top=y+'px';if(PHONE){el.style.right='20px';}
+      const fig=el.querySelector('figure').getBoundingClientRect();const sx=PHONE?fig.left+fig.width*.5:el.getBoundingClientRect().right-6, sy=PHONE?fig.top:fig.top+fig.height*.35;
+      const mx=(sx+ax)/2;paths+=`<path d="M${sx},${sy} C${mx},${sy} ${mx},${ay} ${ax},${ay}" fill="none" stroke="#2d2333" stroke-width="1.4"/>`+
+        `<circle cx="${ax}" cy="${ay}" r="9" fill="none" stroke="#2d2333" stroke-width="1.4"/><circle cx="${ax}" cy="${ay}" r="3.5" fill="#2d2333"/>`;
+      RUNG[ri].mesh.material=ACT_MAT;
+    }else{
+      // small cards sit outward from the helix axis, on the side away from the active card
+      const [cx]=project(new THREE.Vector3().setFromMatrixPosition(group.matrixWorld));
+      let [x,y]=SLOTS[i];if(PHONE){x=Math.max(24,Math.min(innerWidth-24,ax+(ax>innerWidth/2?-34:34)));y=ay;}const side=x>ax?1:-1;
+      el.style.left=x+'px';el.style.top=y+'px';
+      const bx=x-side*(PHONE?14:44), cy=PHONE?y:Math.max(y-40,Math.min(y+40,ay));
+      paths+=`<path d="M${bx},${cy} Q${(bx+ax)/2},${ay-18} ${ax},${ay}" fill="none" stroke="#2d2333" stroke-opacity=".55" stroke-width="1"/><circle cx="${ax}" cy="${ay}" r="2.6" fill="#2d2333"/>`;
+    }});
+  svg.innerHTML=paths;}
+
+// ---------------- loop ----------------
+let curT=T0;
+function frame(ms){curT=STILL?T0:T0+ms/1000;updateStrands(curT);updateRungs(curT);R.render(scene,cam);placeCallouts();
+  if(!STILL)requestAnimationFrame(frame);else window.__ready=true;}
+document.fonts.ready.then(()=>{frame(0);if(!STILL)requestAnimationFrame(frame);setTimeout(()=>window.__ready=true,300);});
+</script>
+</body>
+</html>

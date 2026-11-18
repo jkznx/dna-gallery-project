@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gallery · dna (3D prototype P1)</title>
+<!--
+  DNA Gallery 3D · P1 prototype (Prof. Ultron). Standalone, not wired into the Next.js app.
+  Opens over file://. three.js r147 (MIT) from ../../agent-office/vendor, fonts (OFL) from ../src/fonts,
+  images from ../public/samples. Design: Dr. Miranda, design-p0 (recommended mix).
+  Hash options for checks: #a=0..5 start at an artwork · #still=1 start with motion paused (not remembered)
+-->
+<style>
+@font-face{font-family:Montserrat;font-weight:100 900;src:url(../src/fonts/Montserrat.ttf) format("truetype")}
+@font-face{font-family:Caveat;font-weight:400 700;src:url(../src/fonts/Caveat.ttf) format("truetype")}
+:root{--cream:#fff6d7;--paper:#fffbee;--lavender:#dda9ef;--yellow:#f8ed94;--ink:#2d2333;--plum:#6c3e7f;--mut:#66576b;--line:#2d233326;
+  --m:80px;--hdr:88px;--dock:84px;--fig:218px;--thumb:84px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--cream);color:var(--ink);font:500 16px/1.6 Montserrat,sans-serif;overflow-x:hidden}
+#bg{position:fixed;inset:0;background:
+  radial-gradient(48% 60% at 72% 46%,#fffdf3 0%,#fffbee 38%,transparent 72%),
+  radial-gradient(38% 42% at 92% 12%,#efd3f6aa 0%,transparent 70%),
+  radial-gradient(40% 40% at 60% 100%,#fbf2b4aa 0%,transparent 70%),var(--cream)}
+#gl{position:fixed;inset:0;width:100vw;height:100vh;display:block;transition:opacity 75ms linear}
+#gl.cut{opacity:.15}
+svg#leaders{position:fixed;inset:0;width:100vw;height:100vh;pointer-events:none;overflow:visible}
+#spacer{width:1px}
+.ui{position:fixed;inset:0;pointer-events:none}
+.ui a,.ui button,.ui nav{pointer-events:auto}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:3px solid var(--plum);outline-offset:3px}
+/* header (same chrome as the site) */
+header{position:absolute;left:var(--m);right:var(--m);top:0;height:var(--hdr);display:flex;align-items:center;gap:28px;border-bottom:1px solid var(--line)}
+.wordmark{color:inherit;text-decoration:none;font-size:36px;font-weight:700;letter-spacing:-.09em;line-height:1}
+.wordmark span{display:inline-block;color:var(--plum);font-size:32px;margin-left:5px}
+.caption{color:var(--mut);font-size:.75rem}
+nav{display:flex;gap:6px;margin-left:auto;padding:4px;border:1px solid var(--line);border-radius:99px;background:#fffbee99;backdrop-filter:blur(6px)}
+nav a{display:inline-flex;align-items:center;min-height:44px;padding:10px 25px;border-radius:99px;font-size:.8125rem;font-weight:600;color:inherit;text-decoration:none}
+nav a[aria-current=page]{background:var(--ink);color:var(--cream)}
+/* intro */
+.intro{position:absolute;left:var(--m);top:calc(var(--hdr) + 40px);width:470px;pointer-events:none}
+.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:.625rem;font-weight:600;margin-bottom:12px}
+h1{font-size:46px;font-weight:600;line-height:1.06;letter-spacing:-.06em}
+h1 span{color:var(--plum)}
+.copy{font-size:.875rem;line-height:1.6;max-width:380px;margin-top:14px;color:#4b3f50}
+/* active card */
+.active-card{position:absolute;left:var(--m);display:flex;gap:22px;align-items:flex-end;color:inherit;text-decoration:none;transform-origin:0 0;border-radius:6px}
+.active-card figure{width:var(--fig);flex:none;background:var(--paper);padding:9px 9px 10px;border:1px solid var(--line);border-radius:4px;box-shadow:0 28px 60px #2d233326,0 4px 12px #2d233314}
+.active-card img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:2px}
+.active-text{width:210px;padding-bottom:4px}
+.active-text .num,.active-text .medium,.active-text .hand{display:block}
+.active-card.compact .hand{display:none}
+.active-text .num{font-size:.625rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--plum)}
+.active-text h2{font-size:30px;font-weight:600;letter-spacing:-.05em;line-height:1.1;margin:8px 0 6px}
+.active-text .medium{font-size:.6875rem;color:var(--mut)}
+.active-text .hand{font-family:Caveat,cursive;font-size:1.45rem;line-height:1.2;color:var(--plum);margin:12px 0 16px;transform:rotate(-2deg)}
+.view{display:inline-flex;align-items:center;gap:18px;min-height:44px;padding:10px 20px;background:var(--ink);color:var(--cream);border-radius:99px;font-size:.75rem;font-weight:500}
+/* small callouts (mouse shortcut; the keyboard path is the picker) */
+#smalls{position:absolute;inset:0;pointer-events:none}
+.small{position:absolute;left:0;top:0;width:var(--thumb);border:0;background:none;padding:0;font:inherit;color:inherit;cursor:pointer;pointer-events:auto;will-change:transform;text-align:left}
+.small[hidden]{display:none!important}
+.small figure{background:var(--paper);padding:5px 5px 6px;border:1px solid var(--line);box-shadow:0 8px 20px #2d233314;border-radius:3px}
+.small img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:2px}
+.small figcaption{display:flex;gap:5px;align-items:baseline;font-size:9.5px;line-height:1.25;margin-top:5px;font-weight:600}
+.small figcaption b{font-weight:600;color:var(--plum);font-size:9px}
+.small .dotn{display:none}
+.small.fresh{animation:fadein 220ms ease-out}
+@keyframes fadein{from{opacity:0}to{opacity:1}}
+/* dock */
+.dock{background:linear-gradient(#fff6d700,#fff6d7e6 40%);position:absolute;left:var(--m);right:var(--m);bottom:0;height:var(--dock);display:flex;align-items:center;gap:24px;border-top:1px solid var(--line)}
+.btn{white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:44px;min-width:44px;padding:10px 20px;border:1px solid var(--line);border-radius:99px;background:#fffbeecc;font:600 .75rem Montserrat,sans-serif;color:var(--ink);cursor:pointer}
+.picker{display:flex;gap:6px;margin:0 auto}
+.picker button{width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:transparent;font:600 .6875rem Montserrat,sans-serif;color:var(--ink);cursor:pointer}
+.picker button[aria-current=true]{background:var(--ink);color:var(--cream);border-color:var(--ink)}
+.pause{border-style:dashed}
+.pause[aria-pressed=true]{background:var(--ink);color:var(--cream);border-style:solid}
+/* tall (portrait tablet) */
+body.tall{--m:40px;--thumb:76px}
+body.tall .intro{width:auto;right:var(--m)}
+body.tall h1{font-size:40px}
+body.tall .active-card,body.phone .active-card{right:var(--m);gap:18px;align-items:center;background:#fffbeee6;border:1px solid var(--line);border-radius:18px;padding:12px;box-shadow:0 20px 40px #2d23331f;backdrop-filter:blur(8px)}
+body.tall .active-card figure{width:132px;padding:6px;box-shadow:none}
+body.tall .active-text{width:auto;flex:1}
+body.tall .active-text .hand{margin:6px 0 10px}
+/* phone */
+body.phone{--m:20px;--hdr:68px;--dock:76px;--thumb:28px}
+body.phone header{gap:12px}
+body.phone .wordmark{font-size:28px}body.phone .wordmark span{font-size:25px}
+body.phone .caption{display:none}
+body.phone nav{gap:2px;padding:3px}
+body.phone nav a{padding:10px 14px;font-size:.6875rem}
+body.phone .intro{top:calc(var(--hdr) + 18px);width:auto;right:var(--m)}
+body.phone h1{font-size:28px}
+body.phone .copy{display:none}
+body.phone .eyebrow{font-size:.5625rem;margin-bottom:8px}
+body.phone .active-card{padding:10px;gap:14px}
+body.phone .active-card figure{width:96px;padding:5px;box-shadow:none}
+body.phone .active-text{width:auto;flex:1;padding:0}
+body.phone .active-text h2{font-size:22px;margin:4px 0 2px}
+body.phone .active-text .hand{display:none}
+body.phone .view{margin-top:8px;min-height:40px;padding:8px 16px}
+body.phone .dock{gap:6px}
+body.phone .dock .btn{width:44px;padding:0}body.phone .dock .lbl{display:none}
+body.phone .picker{gap:0}body.phone .picker button{width:32px;height:44px;flex:none;border:0;border-radius:8px;font-size:.625rem}
+body.phone .small{width:28px;height:28px;border-radius:50%;background:var(--paper);border:1px solid var(--ink);display:grid;place-items:center}
+body.phone .small figure{display:none}body.phone .small .dotn{display:block;font-size:.5625rem;font-weight:700;line-height:1}
+/* fallback: no WebGL or no JavaScript */
+#static{display:none;list-style:none;display:none;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:20px;padding:120px var(--m) 40px}
+#static img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border:1px solid var(--line)}
+#static a{color:inherit;text-decoration:none;font-weight:600;font-size:.875rem}
+body.no-webgl #static{display:grid}body.no-webgl #gl,body.no-webgl #leaders,body.no-webgl #smalls,body.no-webgl .active-card,body.no-webgl .dock{display:none}
+body.no-webgl .ui{position:absolute;height:0}
+</style>
+</head>
+<body class="wide">
+<div id="bg"></div>
+<canvas id="gl" aria-hidden="true"></canvas>
+<svg id="leaders" aria-hidden="true"></svg>
+<div id="spacer" aria-hidden="true"></div>
+<div class="ui">
+  <header>
+    <a class="wordmark" href="/gallery" aria-label="DNA gallery home">dna<span aria-hidden="true">✳</span></a>
+    <span class="caption">A collection of connections.</span>
+    <nav aria-label="Main navigation"><a href="/gallery" aria-current="page">Gallery</a><a href="/saved">Saved</a><a href="/info">Info</a></nav>
+  </header>
+  <div class="intro" id="intro">
+    <p class="eyebrow">An exploration of form &amp; feeling</p>
+    <h1>A little art.<br><span>A shared thread.</span></h1>
+    <p class="copy">Six studies. Two winding strands. Find the connections in between.</p>
+  </div>
+  <div id="smalls" aria-hidden="true"></div>
+  <a class="active-card" id="active" href="#">
+    <figure><img id="aImg" alt="" width="400" height="500" decoding="async"></figure>
+    <span class="active-text"><span class="num" id="aNum"></span><span class="sr-only">: </span><h2 id="aTitle"></h2><span class="medium" id="aMedium"></span><span class="hand" id="aHand"></span><span class="view">View artwork <span aria-hidden="true">→</span></span></span>
+  </a>
+  <div class="dock" id="dock" role="group" aria-label="Choose an artwork">
+    <button class="btn" id="prev" aria-label="Previous artwork"><span aria-hidden="true">←</span><span class="lbl"> Previous</span></button>
+    <div class="picker" id="picker"></div>
+    <button class="btn" id="next" aria-label="Next artwork"><span class="lbl">Next </span><span aria-hidden="true">→</span></button>
+    <button class="btn pause" id="pause" aria-pressed="false"><span aria-hidden="true" id="pauseIcon">❚❚</span><span class="lbl" id="pauseLbl"> Pause motion</span></button>
+  </div>
+  <p id="live" class="sr-only" aria-live="polite"></p>
+</div>
+<ul id="static" aria-label="Artworks">
+  <li><a href="/artwork/soft-orbit"><img src="../public/samples/soft-orbit.png" alt="" loading="lazy">01 · Soft orbit</a></li>
+  <li><a href="/artwork/in-between"><img src="../public/samples/in-between.png" alt="" loading="lazy">02 · In between</a></li>
+  <li><a href="/artwork/daylight"><img src="../public/samples/daylight.png" alt="" loading="lazy">03 · Daylight</a></li>
+  <li><a href="/artwork/little-waves"><img src="../public/samples/little-waves.png" alt="" loading="lazy">04 · Little waves</a></li>
+  <li><a href="/artwork/growing-room"><img src="../public/samples/growing-room.png" alt="" loading="lazy">05 · Growing room</a></li>
+  <li><a href="/artwork/afterglow"><img src="../public/samples/afterglow.png" alt="" loading="lazy">06 · Afterglow</a></li>
+</ul>
+<noscript><style>#static{display:grid!important}#gl,#leaders,.active-card,.dock{display:none!important}.ui{position:absolute!important;height:0}</style>
+  <p style="padding:120px 20px 0">JavaScript is off, so the 3D view is not shown. The six artworks are listed below.</p></noscript>
+<script src="../../agent-office/vendor/three.min.js"></script>
+<script src="helix-math.js"></script>
+<script src="callout-layout.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

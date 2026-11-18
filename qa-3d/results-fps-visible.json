@@ -1,0 +1,1069 @@
+{
+ "base": "http://127.0.0.1:3100",
+ "errors": {
+  "layout 1920x1080": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "layout 1440x900": [],
+  "layout 1366x768": [],
+  "layout 1280x720": [],
+  "layout 1024x768": [],
+  "layout 768x1024": [],
+  "layout 390x844": [],
+  "layout 360x740": [],
+  "selection": [],
+  "return": [],
+  "pause": []
+ },
+ "layout": {
+  "1920x1080": [
+   {
+    "problems": [],
+    "active": 0,
+    "neighboursShown": [
+     1
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 0,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 1,
+    "neighboursShown": [
+     0,
+     2,
+     3
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 1,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 2,
+    "neighboursShown": [
+     0,
+     1,
+     3,
+     4
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 2,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 3,
+    "neighboursShown": [
+     1,
+     2,
+     4,
+     5
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 3,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 4,
+    "neighboursShown": [
+     2,
+     3,
+     5
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 4,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 5,
+    "neighboursShown": [
+     3,
+     4
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 5,
+    "ok": true
+   }
+  ],
+  "1440x900": [
+   {
+    "problems": [],
+    "active": 0,
+    "neighboursShown": [
+     1
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 0,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 1,
+    "neighboursShown": [
+     0,
+     2,
+     3
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 1,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 2,
+    "neighboursShown": [
+     0,
+     1,
+     3,
+     4
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 2,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 3,
+    "neighboursShown": [
+     1,
+     2,
+     4,
+     5
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 3,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 4,
+    "neighboursShown": [
+     2,
+     3,
+     5
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 4,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 5,
+    "neighboursShown": [
+     3,
+     4
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 5,
+    "ok": true
+   }
+  ],
+  "1366x768": [
+   {
+    "problems": [],
+    "active": 0,
+    "neighboursShown": [
+     1
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 0,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 1,
+    "neighboursShown": [
+     0,
+     2,
+     3
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 1,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 2,
+    "neighboursShown": [
+     0,
+     1,
+     3,
+     4
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 2,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 3,
+    "neighboursShown": [
+     1,
+     2,
+     4,
+     5
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 3,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 4,
+    "neighboursShown": [
+     2,
+     3,
+     5
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 4,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 5,
+    "neighboursShown": [
+     3,
+     4
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 5,
+    "ok": true
+   }
+  ],
+  "1280x720": [
+   {
+    "problems": [],
+    "active": 0,
+    "neighboursShown": [
+     1
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 0,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 1,
+    "neighboursShown": [
+     0,
+     2,
+     3
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 1,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 2,
+    "neighboursShown": [
+     0,
+     1,
+     3,
+     4
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 2,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 3,
+    "neighboursShown": [
+     2,
+     4,
+     5
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 3,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 4,
+    "neighboursShown": [
+     2,
+     3,
+     5
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 4,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 5,
+    "neighboursShown": [
+     3,
+     4
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 5,
+    "ok": true
+   }
+  ],
+  "1024x768": [
+   {
+    "problems": [],
+    "active": 0,
+    "neighboursShown": [
+     1
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 0,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 1,
+    "neighboursShown": [
+     0,
+     2,
+     3
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 1,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 2,
+    "neighboursShown": [
+     0,
+     1,
+     3,
+     4
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 2,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 3,
+    "neighboursShown": [
+     1,
+     2,
+     4,
+     5
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 3,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 4,
+    "neighboursShown": [
+     2,
+     3,
+     5
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 4,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 5,
+    "neighboursShown": [
+     3,
+     4
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 5,
+    "ok": true
+   }
+  ],
+  "768x1024": [
+   {
+    "problems": [],
+    "active": 0,
+    "neighboursShown": [
+     1
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "tall",
+    "state": "3d",
+    "want": 0,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 1,
+    "neighboursShown": [
+     2,
+     3
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "tall",
+    "state": "3d",
+    "want": 1,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 2,
+    "neighboursShown": [
+     1,
+     3,
+     4
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "tall",
+    "state": "3d",
+    "want": 2,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 3,
+    "neighboursShown": [
+     4,
+     5
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "tall",
+    "state": "3d",
+    "want": 3,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 4,
+    "neighboursShown": [
+     5
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "tall",
+    "state": "3d",
+    "want": 4,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 5,
+    "neighboursShown": [
+     4
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "tall",
+    "state": "3d",
+    "want": 5,
+    "ok": true
+   }
+  ],
+  "390x844": [
+   {
+    "problems": [],
+    "active": 0,
+    "neighboursShown": [
+     1
+    ],
+    "scrimCoversHeadline": true,
+    "mode": "phone",
+    "state": "3d",
+    "want": 0,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 1,
+    "neighboursShown": [
+     0,
+     2
+    ],
+    "scrimCoversHeadline": true,
+    "mode": "phone",
+    "state": "3d",
+    "want": 1,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 2,
+    "neighboursShown": [
+     1,
+     3
+    ],
+    "scrimCoversHeadline": true,
+    "mode": "phone",
+    "state": "3d",
+    "want": 2,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 3,
+    "neighboursShown": [
+     2,
+     4
+    ],
+    "scrimCoversHeadline": true,
+    "mode": "phone",
+    "state": "3d",
+    "want": 3,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 4,
+    "neighboursShown": [
+     3,
+     5
+    ],
+    "scrimCoversHeadline": true,
+    "mode": "phone",
+    "state": "3d",
+    "want": 4,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 5,
+    "neighboursShown": [
+     4
+    ],
+    "scrimCoversHeadline": true,
+    "mode": "phone",
+    "state": "3d",
+    "want": 5,
+    "ok": true
+   }
+  ],
+  "360x740": [
+   {
+    "problems": [
+     "dock button outside viewport: Pause motion"
+    ],
+    "active": 0,
+    "neighboursShown": [
+     1
+    ],
+    "scrimCoversHeadline": true,
+    "mode": "phone",
+    "state": "3d",
+    "want": 0,
+    "ok": false
+   },
+   {
+    "problems": [
+     "dock button outside viewport: Pause motion"
+    ],
+    "active": 1,
+    "neighboursShown": [
+     2
+    ],
+    "scrimCoversHeadline": true,
+    "mode": "phone",
+    "state": "3d",
+    "want": 1,
+    "ok": false
+   },
+   {
+    "problems": [
+     "dock button outside viewport: Pause motion"
+    ],
+    "active": 2,
+    "neighboursShown": [
+     3
+    ],
+    "scrimCoversHeadline": true,
+    "mode": "phone",
+    "state": "3d",
+    "want": 2,
+    "ok": false
+   },
+   {
+    "problems": [
+     "dock button outside viewport: Pause motion"
+    ],
+    "active": 3,
+    "neighboursShown": [
+     4
+    ],
+    "scrimCoversHeadline": true,
+    "mode": "phone",
+    "state": "3d",
+    "want": 3,
+    "ok": false
+   },
+   {
+    "problems": [
+     "dock button outside viewport: Pause motion"
+    ],
+    "active": 4,
+    "neighboursShown": [
+     5
+    ],
+    "scrimCoversHeadline": true,
+    "mode": "phone",
+    "state": "3d",
+    "want": 4,
+    "ok": false
+   },
+   {
+    "problems": [
+     "dock button outside viewport: Pause motion"
+    ],
+    "active": 5,
+    "neighboursShown": [
+     4
+    ],
+    "scrimCoversHeadline": true,
+    "mode": "phone",
+    "state": "3d",
+    "want": 5,
+    "ok": false
+   }
+  ]
+ },
+ "selection": {
+  "wheel": [
+   {
+    "i": 0,
+    "a": 0,
+    "p": 0,
+    "y": 0,
+    "ok": true
+   },
+   {
+    "i": 1,
+    "a": 1,
+    "p": 0.2,
+    "y": 538,
+    "ok": true
+   },
+   {
+    "i": 2,
+    "a": 2,
+    "p": 0.4,
+    "y": 1076,
+    "ok": true
+   },
+   {
+    "i": 3,
+    "a": 3,
+    "p": 0.6,
+    "y": 1614,
+    "ok": true
+   },
+   {
+    "i": 4,
+    "a": 4,
+    "p": 0.8,
+    "y": 2152,
+    "ok": true
+   },
+   {
+    "i": 5,
+    "a": 5,
+    "p": 1,
+    "y": 2690,
+    "ok": true
+   }
+  ],
+  "between": [
+   {
+    "frac": 0.4,
+    "want": 2,
+    "a": 2,
+    "p": 0.4,
+    "ok": true
+   },
+   {
+    "frac": 0.6,
+    "want": 3,
+    "a": 3,
+    "p": 0.6,
+    "ok": true
+   }
+  ],
+  "picker": [
+   {
+    "i": 5,
+    "a": 5,
+    "p": 1,
+    "y": 2690,
+    "focus": "06 Afterglow",
+    "live": "06 of 06, Afterglow",
+    "current": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     "true"
+    ],
+    "ok": true
+   },
+   {
+    "i": 0,
+    "a": 0,
+    "p": 0,
+    "y": 0,
+    "focus": "01 Soft orbit",
+    "live": "01 of 06, Soft orbit",
+    "current": [
+     "true",
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    "ok": true
+   },
+   {
+    "i": 3,
+    "a": 3,
+    "p": 0.6,
+    "y": 1614,
+    "focus": "04 Little waves",
+    "live": "04 of 06, Little waves",
+    "current": [
+     null,
+     null,
+     null,
+     "true",
+     null,
+     null
+    ],
+    "ok": true
+   },
+   {
+    "i": 1,
+    "a": 1,
+    "p": 0.2,
+    "y": 538,
+    "focus": "02 In between",
+    "live": "02 of 06, In between",
+    "current": [
+     null,
+     "true",
+     null,
+     null,
+     null,
+     null
+    ],
+    "ok": true
+   },
+   {
+    "i": 4,
+    "a": 4,
+    "p": 0.8,
+    "y": 2152,
+    "focus": "05 Growing room",
+    "live": "05 of 06, Growing room",
+    "current": [
+     null,
+     null,
+     null,
+     null,
+     "true",
+     null
+    ],
+    "ok": true
+   },
+   {
+    "i": 2,
+    "a": 2,
+    "p": 0.4,
+    "y": 1076,
+    "focus": "03 Daylight",
+    "live": "03 of 06, Daylight",
+    "current": [
+     null,
+     null,
+     "true",
+     null,
+     null,
+     null
+    ],
+    "ok": true
+   }
+  ],
+  "next": {
+   "a": 3,
+   "focus": "Next artwork",
+   "live": "04 of 06, Little waves"
+  },
+  "prev": {
+   "a": 2,
+   "focus": "Previous artwork"
+  },
+  "arrowRightFrom2": 3,
+  "pageNotScrolledByAnimation": true
+ },
+ "keyboard": {
+  "tabSequence": [
+   "Skip to content",
+   "DNA gallery home",
+   "Gallery",
+   "Saved",
+   "Info",
+   "View artwork: Soft orbit, 01 of 06",
+   "Previous artwork",
+   "01 Soft orbit",
+   "02 In between",
+   "03 Daylight",
+   "04 Little waves",
+   "05 Growing room",
+   "06 Afterglow",
+   "Next artwork",
+   "Pause motion",
+   "DNA flow"
+  ],
+  "focusableNeighbourCards": 0,
+  "smallsAriaHidden": "true",
+  "pickerNames": [
+   [
+    "01 Soft orbit",
+    "Soft orbit"
+   ],
+   [
+    "02 In between",
+    "In between"
+   ],
+   [
+    "03 Daylight",
+    "Daylight"
+   ],
+   [
+    "04 Little waves",
+    "Little waves"
+   ],
+   [
+    "05 Growing room",
+    "Growing room"
+   ],
+   [
+    "06 Afterglow",
+    "Afterglow"
+   ]
+  ]
+ },
+ "pause": {
+  "start": {
+   "text": "Pause motion",
+   "aria": "Pause motion",
+   "title": "Pause motion",
+   "motion": "on",
+   "pressed": null,
+   "icon": "bars"
+  },
+  "afterPress": {
+   "text": "Resume motion",
+   "aria": "Resume motion",
+   "title": "Resume motion",
+   "motion": "off",
+   "pressed": null,
+   "icon": "play"
+  },
+  "afterReloadSameSession": {
+   "text": "Resume motion",
+   "aria": "Resume motion",
+   "title": "Resume motion",
+   "motion": "off",
+   "pressed": null,
+   "icon": "play"
+  },
+  "reducedStart": {
+   "text": "Resume motion",
+   "aria": "Resume motion",
+   "title": "Resume motion",
+   "motion": "off",
+   "pressed": null,
+   "icon": "play"
+  },
+  "reducedAfterPress": {
+   "text": "Pause motion",
+   "aria": "Pause motion",
+   "title": "Pause motion",
+   "motion": "on",
+   "pressed": null,
+   "icon": "bars"
+  },
+  "reducedAfterReload": {
+   "text": "Resume motion",
+   "aria": "Resume motion",
+   "title": "Resume motion",
+   "motion": "off",
+   "pressed": null,
+   "icon": "play"
+  }
+ },
+ "fallback": {
+  "noWebGL": {
+   "state": "static",
+   "links": 6,
+   "canvas": false
+  },
+  "noWebGLErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "noJS": {
+   "/gallery as served": {
+    "loadingFallbackVisible": true,
+    "visibleArtworkLinks": 0
+   },
+   "/grid as served": {
+    "loadingFallbackVisible": true,
+    "visibleArtworkLinks": 0
+   },
+   "/gallery stream unwrapped": {
+    "visibleStaticLinks": 6,
+    "state": "pending",
+    "h1": "A little art.\nA shared thread."
+   }
+  }
+ },
+ "bundles": {
+  "/gallery": {
+   "threeChunks": [
+    "23t4zcdfmxuq3.js"
+   ],
+   "errors": []
+  },
+  "/helix": {
+   "threeChunks": [
+    "23t4zcdfmxuq3.js"
+   ],
+   "errors": []
+  },
+  "/grid": {
+   "threeChunks": [],
+   "errors": []
+  },
+  "/info": {
+   "threeChunks": [],
+   "errors": []
+  },
+  "/connections": {
+   "threeChunks": [],
+   "errors": []
+  },
+  "/saved": {
+   "threeChunks": [],
+   "errors": []
+  },
+  "/artwork/daylight?layout=helix": {
+   "threeChunks": [],
+   "errors": []
+  }
+ },
+ "return": {
+  "history": {
+   "a": 3,
+   "focus": "h3d-active",
+   "p": 0.6
+  },
+  "fragment005": {
+   "a": 4,
+   "focus": "h3d-active"
+  },
+  "detailBackLink": "/helix#artwork-sample-004",
+  "backLinkActive": 3
+ },
+ "fps": {
+  "gpu": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+  "visibleWindow": true,
+  "rAF": {
+   "n": 120,
+   "median_ms": 6.9,
+   "p95_ms": 7.1,
+   "max_ms": 14,
+   "fps_median": 144.9,
+   "share_over_20ms": 0.0
+  },
+  "travel": {
+   "n": 1252,
+   "median_ms": 7.1,
+   "p95_ms": 16.2,
+   "max_ms": 56.2,
+   "fps_median": 140.8,
+   "share_over_20ms": 0.027
+  },
+  "flights": {
+   "n": 480,
+   "median_ms": 7.1,
+   "p95_ms": 14.3,
+   "max_ms": 19.1,
+   "fps_median": 140.8,
+   "share_over_20ms": 0.0
+  },
+  "breathing": {
+   "n": 288,
+   "median_ms": 13.9,
+   "p95_ms": 14.9,
+   "max_ms": 16.0,
+   "fps_median": 71.9,
+   "share_over_20ms": 0.0
+  }
+ }
+}

@@ -1,0 +1,1092 @@
+{
+ "base": "http://127.0.0.1:3100",
+ "errors": {
+  "layout 1920x1080": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "layout 1440x900": [],
+  "layout 1366x768": [],
+  "layout 1280x720": [],
+  "layout 1024x768": [],
+  "layout 768x1024": [],
+  "layout 390x844": [],
+  "layout 360x740": [],
+  "selection": [],
+  "return": [],
+  "pause": [],
+  "look": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ]
+ },
+ "layout": {
+  "1920x1080": [
+   {
+    "problems": [],
+    "active": 0,
+    "neighboursShown": [
+     1
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 0,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 1,
+    "neighboursShown": [
+     0,
+     2,
+     3
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 1,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 2,
+    "neighboursShown": [
+     0,
+     1,
+     3,
+     4
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 2,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 3,
+    "neighboursShown": [
+     1,
+     2,
+     4,
+     5
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 3,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 4,
+    "neighboursShown": [
+     2,
+     3,
+     5
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 4,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 5,
+    "neighboursShown": [
+     3,
+     4
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 5,
+    "ok": true
+   }
+  ],
+  "1440x900": [
+   {
+    "problems": [],
+    "active": 0,
+    "neighboursShown": [
+     1
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 0,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 1,
+    "neighboursShown": [
+     0,
+     2,
+     3
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 1,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 2,
+    "neighboursShown": [
+     0,
+     1,
+     3,
+     4
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 2,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 3,
+    "neighboursShown": [
+     1,
+     2,
+     4,
+     5
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 3,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 4,
+    "neighboursShown": [
+     2,
+     3,
+     5
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 4,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 5,
+    "neighboursShown": [
+     3,
+     4
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 5,
+    "ok": true
+   }
+  ],
+  "1366x768": [
+   {
+    "problems": [],
+    "active": 0,
+    "neighboursShown": [
+     1
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 0,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 1,
+    "neighboursShown": [
+     0,
+     2,
+     3
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 1,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 2,
+    "neighboursShown": [
+     0,
+     1,
+     3,
+     4
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 2,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 3,
+    "neighboursShown": [
+     1,
+     2,
+     4,
+     5
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 3,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 4,
+    "neighboursShown": [
+     2,
+     3,
+     5
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 4,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 5,
+    "neighboursShown": [
+     3,
+     4
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 5,
+    "ok": true
+   }
+  ],
+  "1280x720": [
+   {
+    "problems": [],
+    "active": 0,
+    "neighboursShown": [
+     1
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 0,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 1,
+    "neighboursShown": [
+     0,
+     2,
+     3
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 1,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 2,
+    "neighboursShown": [
+     0,
+     1,
+     3,
+     4
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 2,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 3,
+    "neighboursShown": [
+     2,
+     4,
+     5
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 3,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 4,
+    "neighboursShown": [
+     2,
+     3,
+     5
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 4,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 5,
+    "neighboursShown": [
+     3,
+     4
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 5,
+    "ok": true
+   }
+  ],
+  "1024x768": [
+   {
+    "problems": [],
+    "active": 0,
+    "neighboursShown": [
+     1
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 0,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 1,
+    "neighboursShown": [
+     0,
+     2,
+     3
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 1,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 2,
+    "neighboursShown": [
+     0,
+     1,
+     3,
+     4
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 2,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 3,
+    "neighboursShown": [
+     1,
+     2,
+     4,
+     5
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 3,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 4,
+    "neighboursShown": [
+     2,
+     3,
+     5
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 4,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 5,
+    "neighboursShown": [
+     3,
+     4
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "wide",
+    "state": "3d",
+    "want": 5,
+    "ok": true
+   }
+  ],
+  "768x1024": [
+   {
+    "problems": [],
+    "active": 0,
+    "neighboursShown": [
+     1
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "tall",
+    "state": "3d",
+    "want": 0,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 1,
+    "neighboursShown": [
+     2,
+     3
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "tall",
+    "state": "3d",
+    "want": 1,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 2,
+    "neighboursShown": [
+     3,
+     4
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "tall",
+    "state": "3d",
+    "want": 2,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 3,
+    "neighboursShown": [
+     4,
+     5
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "tall",
+    "state": "3d",
+    "want": 3,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 4,
+    "neighboursShown": [
+     5
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "tall",
+    "state": "3d",
+    "want": 4,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 5,
+    "neighboursShown": [
+     4
+    ],
+    "scrimCoversHeadline": false,
+    "mode": "tall",
+    "state": "3d",
+    "want": 5,
+    "ok": true
+   }
+  ],
+  "390x844": [
+   {
+    "problems": [],
+    "active": 0,
+    "neighboursShown": [
+     1
+    ],
+    "scrimCoversHeadline": true,
+    "mode": "phone",
+    "state": "3d",
+    "want": 0,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 1,
+    "neighboursShown": [
+     2
+    ],
+    "scrimCoversHeadline": true,
+    "mode": "phone",
+    "state": "3d",
+    "want": 1,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 2,
+    "neighboursShown": [
+     1,
+     3
+    ],
+    "scrimCoversHeadline": true,
+    "mode": "phone",
+    "state": "3d",
+    "want": 2,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 3,
+    "neighboursShown": [
+     4
+    ],
+    "scrimCoversHeadline": true,
+    "mode": "phone",
+    "state": "3d",
+    "want": 3,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 4,
+    "neighboursShown": [
+     5
+    ],
+    "scrimCoversHeadline": true,
+    "mode": "phone",
+    "state": "3d",
+    "want": 4,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 5,
+    "neighboursShown": [
+     4
+    ],
+    "scrimCoversHeadline": true,
+    "mode": "phone",
+    "state": "3d",
+    "want": 5,
+    "ok": true
+   }
+  ],
+  "360x740": [
+   {
+    "problems": [],
+    "active": 0,
+    "neighboursShown": [
+     1
+    ],
+    "scrimCoversHeadline": true,
+    "mode": "phone",
+    "state": "3d",
+    "want": 0,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 1,
+    "neighboursShown": [
+     2
+    ],
+    "scrimCoversHeadline": true,
+    "mode": "phone",
+    "state": "3d",
+    "want": 1,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 2,
+    "neighboursShown": [
+     3
+    ],
+    "scrimCoversHeadline": true,
+    "mode": "phone",
+    "state": "3d",
+    "want": 2,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 3,
+    "neighboursShown": [
+     4
+    ],
+    "scrimCoversHeadline": true,
+    "mode": "phone",
+    "state": "3d",
+    "want": 3,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 4,
+    "neighboursShown": [
+     5
+    ],
+    "scrimCoversHeadline": true,
+    "mode": "phone",
+    "state": "3d",
+    "want": 4,
+    "ok": true
+   },
+   {
+    "problems": [],
+    "active": 5,
+    "neighboursShown": [
+     4
+    ],
+    "scrimCoversHeadline": true,
+    "mode": "phone",
+    "state": "3d",
+    "want": 5,
+    "ok": true
+   }
+  ]
+ },
+ "selection": {
+  "wheel": [
+   {
+    "i": 0,
+    "a": 0,
+    "p": 0,
+    "y": 0,
+    "ok": true
+   },
+   {
+    "i": 1,
+    "a": 1,
+    "p": 0.2,
+    "y": 538,
+    "ok": true
+   },
+   {
+    "i": 2,
+    "a": 2,
+    "p": 0.4,
+    "y": 1076,
+    "ok": true
+   },
+   {
+    "i": 3,
+    "a": 3,
+    "p": 0.6,
+    "y": 1614,
+    "ok": true
+   },
+   {
+    "i": 4,
+    "a": 4,
+    "p": 0.8,
+    "y": 2152,
+    "ok": true
+   },
+   {
+    "i": 5,
+    "a": 5,
+    "p": 1,
+    "y": 2690,
+    "ok": true
+   }
+  ],
+  "between": [
+   {
+    "frac": 0.4,
+    "want": 2,
+    "a": 2,
+    "p": 0.4,
+    "ok": true
+   },
+   {
+    "frac": 0.6,
+    "want": 3,
+    "a": 3,
+    "p": 0.6,
+    "ok": true
+   }
+  ],
+  "picker": [
+   {
+    "i": 5,
+    "a": 5,
+    "p": 1,
+    "y": 2690,
+    "focus": "06 Afterglow",
+    "live": "06 of 06, Afterglow",
+    "current": [
+     null,
+     null,
+     null,
+     null,
+     null,
+     "true"
+    ],
+    "ok": true
+   },
+   {
+    "i": 0,
+    "a": 0,
+    "p": 0,
+    "y": 0,
+    "focus": "01 Soft orbit",
+    "live": "01 of 06, Soft orbit",
+    "current": [
+     "true",
+     null,
+     null,
+     null,
+     null,
+     null
+    ],
+    "ok": true
+   },
+   {
+    "i": 3,
+    "a": 3,
+    "p": 0.6,
+    "y": 1614,
+    "focus": "04 Little waves",
+    "live": "04 of 06, Little waves",
+    "current": [
+     null,
+     null,
+     null,
+     "true",
+     null,
+     null
+    ],
+    "ok": true
+   },
+   {
+    "i": 1,
+    "a": 1,
+    "p": 0.2,
+    "y": 538,
+    "focus": "02 In between",
+    "live": "02 of 06, In between",
+    "current": [
+     null,
+     "true",
+     null,
+     null,
+     null,
+     null
+    ],
+    "ok": true
+   },
+   {
+    "i": 4,
+    "a": 4,
+    "p": 0.8,
+    "y": 2152,
+    "focus": "05 Growing room",
+    "live": "05 of 06, Growing room",
+    "current": [
+     null,
+     null,
+     null,
+     null,
+     "true",
+     null
+    ],
+    "ok": true
+   },
+   {
+    "i": 2,
+    "a": 2,
+    "p": 0.4,
+    "y": 1076,
+    "focus": "03 Daylight",
+    "live": "03 of 06, Daylight",
+    "current": [
+     null,
+     null,
+     "true",
+     null,
+     null,
+     null
+    ],
+    "ok": true
+   }
+  ],
+  "next": {
+   "a": 3,
+   "focus": "Next artwork",
+   "live": "04 of 06, Little waves"
+  },
+  "prev": {
+   "a": 2,
+   "focus": "Previous artwork"
+  },
+  "arrowRightFrom2": 3,
+  "pageNotScrolledByAnimation": true
+ },
+ "keyboard": {
+  "tabSequence": [
+   "Skip to content",
+   "DNA gallery home",
+   "Gallery",
+   "Saved",
+   "Info",
+   "Grid view",
+   "Connections",
+   "Search",
+   "View artwork: Soft orbit, 01 of 06",
+   "Previous artwork",
+   "01 Soft orbit",
+   "02 In between",
+   "03 Daylight",
+   "04 Little waves",
+   "05 Growing room",
+   "06 Afterglow"
+  ],
+  "focusableNeighbourCards": 0,
+  "smallsAriaHidden": "true",
+  "pickerNames": [
+   [
+    "01 Soft orbit",
+    "Soft orbit"
+   ],
+   [
+    "02 In between",
+    "In between"
+   ],
+   [
+    "03 Daylight",
+    "Daylight"
+   ],
+   [
+    "04 Little waves",
+    "Little waves"
+   ],
+   [
+    "05 Growing room",
+    "Growing room"
+   ],
+   [
+    "06 Afterglow",
+    "Afterglow"
+   ]
+  ]
+ },
+ "pause": {
+  "start": {
+   "text": "Pause motion",
+   "aria": "Pause motion",
+   "title": "Pause motion",
+   "motion": "on",
+   "pressed": null,
+   "icon": "bars"
+  },
+  "afterPress": {
+   "text": "Resume motion",
+   "aria": "Resume motion",
+   "title": "Resume motion",
+   "motion": "off",
+   "pressed": null,
+   "icon": "play"
+  },
+  "afterReloadSameSession": {
+   "text": "Resume motion",
+   "aria": "Resume motion",
+   "title": "Resume motion",
+   "motion": "off",
+   "pressed": null,
+   "icon": "play"
+  },
+  "reducedStart": {
+   "text": "Resume motion",
+   "aria": "Resume motion",
+   "title": "Resume motion",
+   "motion": "off",
+   "pressed": null,
+   "icon": "play"
+  },
+  "reducedAfterPress": {
+   "text": "Pause motion",
+   "aria": "Pause motion",
+   "title": "Pause motion",
+   "motion": "on",
+   "pressed": null,
+   "icon": "bars"
+  },
+  "reducedAfterReload": {
+   "text": "Resume motion",
+   "aria": "Resume motion",
+   "title": "Resume motion",
+   "motion": "off",
+   "pressed": null,
+   "icon": "play"
+  }
+ },
+ "fallback": {
+  "noWebGL": {
+   "state": "static",
+   "links": 6,
+   "canvas": false
+  },
+  "noWebGLErrors": [
+   "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "noJS": {
+   "/gallery": {
+    "h1": "A little art.A shared thread.",
+    "h1Visible": true,
+    "mainHeight": 1924,
+    "artworkLinks": 6,
+    "detailLinks": 6,
+    "loadingText": false,
+    "hiddenStream": false,
+    "contentAboveFooter": true,
+    "img": 6,
+    "ok": true
+   },
+   "/helix": {
+    "h1": "A little art.A shared thread.",
+    "h1Visible": true,
+    "mainHeight": 1924,
+    "artworkLinks": 6,
+    "detailLinks": 6,
+    "loadingText": false,
+    "hiddenStream": false,
+    "contentAboveFooter": true,
+    "img": 6,
+    "ok": true
+   },
+   "/grid": {
+    "h1": "A little art.A shared thread.",
+    "h1Visible": true,
+    "mainHeight": 1885,
+    "artworkLinks": 6,
+    "detailLinks": 6,
+    "loadingText": false,
+    "hiddenStream": false,
+    "contentAboveFooter": true,
+    "img": 6,
+    "ok": true
+   },
+   "/connections": {
+    "h1": "Find your thread.",
+    "h1Visible": true,
+    "mainHeight": 2128,
+    "artworkLinks": 0,
+    "detailLinks": 6,
+    "loadingText": false,
+    "hiddenStream": false,
+    "contentAboveFooter": true,
+    "img": 6,
+    "ok": true
+   },
+   "/saved": {
+    "h1": "Your little collection.",
+    "h1Visible": true,
+    "mainHeight": 445,
+    "artworkLinks": 0,
+    "detailLinks": 0,
+    "loadingText": false,
+    "hiddenStream": false,
+    "contentAboveFooter": true,
+    "img": 0,
+    "ok": true
+   },
+   "/info": {
+    "h1": "Different forms.Same curiosity.",
+    "h1Visible": true,
+    "mainHeight": 1676,
+    "artworkLinks": 0,
+    "detailLinks": 0,
+    "loadingText": false,
+    "hiddenStream": false,
+    "contentAboveFooter": true,
+    "img": 3,
+    "ok": true
+   },
+   "/artwork/daylight?layout=helix": {
+    "h1": "Daylight",
+    "h1Visible": true,
+    "mainHeight": 1878,
+    "artworkLinks": 0,
+    "detailLinks": 5,
+    "loadingText": false,
+    "hiddenStream": false,
+    "contentAboveFooter": true,
+    "img": 4,
+    "ok": true
+   }
+  }
+ },
+ "bundles": {
+  "/gallery": {
+   "threeChunks": [
+    "0lmd3dz-rrxpc.js"
+   ],
+   "errors": []
+  },
+  "/helix": {
+   "threeChunks": [
+    "0lmd3dz-rrxpc.js"
+   ],
+   "errors": []
+  },
+  "/grid": {
+   "threeChunks": [],
+   "errors": []
+  },
+  "/info": {
+   "threeChunks": [],
+   "errors": []
+  },
+  "/connections": {
+   "threeChunks": [],
+   "errors": []
+  },
+  "/saved": {
+   "threeChunks": [],
+   "errors": []
+  },
+  "/artwork/daylight?layout=helix": {
+   "threeChunks": [],
+   "errors": []
+  }
+ },
+ "return": {
+  "history": {
+   "a": 3,
+   "focus": "h3d-active",
+   "p": 0.6
+  },
+  "fragment005": {
+   "a": 4,
+   "focus": "h3d-active"
+  },
+  "detailBackLink": "/helix#artwork-sample-004",
+  "backLinkActive": 3
+ },
+ "fps": null
+}

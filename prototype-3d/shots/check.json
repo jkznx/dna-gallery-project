@@ -1,0 +1,432 @@
+{
+ "sizes": {
+  "1920x1080": {
+   "still": {
+    "visibleSmall": [
+     0,
+     1,
+     3
+    ],
+    "anchors": 5,
+    "problems": [],
+    "state": {
+     "active": 2,
+     "cur": 0.4,
+     "target": 0.4,
+     "scrolling": false,
+     "flying": false,
+     "motion": false,
+     "mode": "wide",
+     "breathT": 1.4,
+     "scrollY": 1512,
+     "step": 756
+    },
+    "gl": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+   },
+   "motion": {
+    "visibleSmall": [
+     0,
+     1,
+     3
+    ],
+    "anchors": 5,
+    "problems": [],
+    "state": {
+     "active": 2,
+     "cur": 0.4,
+     "target": 0.4,
+     "scrolling": false,
+     "flying": false,
+     "motion": true,
+     "mode": "wide",
+     "breathT": 3.4207666666666676,
+     "scrollY": 1512,
+     "step": 756
+    },
+    "gl": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+   }
+  },
+  "1440x900": {
+   "still": {
+    "visibleSmall": [
+     0,
+     1,
+     3
+    ],
+    "anchors": 5,
+    "problems": [],
+    "state": {
+     "active": 2,
+     "cur": 0.4,
+     "target": 0.4,
+     "scrolling": false,
+     "flying": false,
+     "motion": false,
+     "mode": "wide",
+     "breathT": 1.4,
+     "scrollY": 1260,
+     "step": 630
+    },
+    "gl": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+   },
+   "motion": {
+    "visibleSmall": [
+     0,
+     1,
+     3
+    ],
+    "anchors": 5,
+    "problems": [],
+    "state": {
+     "active": 2,
+     "cur": 0.4,
+     "target": 0.4,
+     "scrolling": false,
+     "flying": false,
+     "motion": true,
+     "mode": "wide",
+     "breathT": 3.320766666666667,
+     "scrollY": 1260,
+     "step": 630
+    },
+    "gl": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+   }
+  },
+  "1366x768": {
+   "still": {
+    "visibleSmall": [
+     0,
+     1,
+     3
+    ],
+    "anchors": 5,
+    "problems": [],
+    "state": {
+     "active": 2,
+     "cur": 0.4,
+     "target": 0.4,
+     "scrolling": false,
+     "flying": false,
+     "motion": false,
+     "mode": "wide",
+     "breathT": 1.4,
+     "scrollY": 1076,
+     "step": 538
+    },
+    "gl": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+   },
+   "motion": {
+    "visibleSmall": [
+     0,
+     1,
+     3
+    ],
+    "anchors": 5,
+    "problems": [],
+    "state": {
+     "active": 2,
+     "cur": 0.4,
+     "target": 0.4,
+     "scrolling": false,
+     "flying": false,
+     "motion": true,
+     "mode": "wide",
+     "breathT": 3.413866666666668,
+     "scrollY": 1076,
+     "step": 538
+    },
+    "gl": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+   }
+  },
+  "1024x768": {
+   "still": {
+    "visibleSmall": [
+     0,
+     1,
+     3
+    ],
+    "anchors": 5,
+    "problems": [],
+    "state": {
+     "active": 2,
+     "cur": 0.4,
+     "target": 0.4,
+     "scrolling": false,
+     "flying": false,
+     "motion": false,
+     "mode": "wide",
+     "breathT": 1.4,
+     "scrollY": 1076,
+     "step": 538
+    },
+    "gl": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+   },
+   "motion": {
+    "visibleSmall": [
+     0,
+     1,
+     3
+    ],
+    "anchors": 5,
+    "problems": [],
+    "state": {
+     "active": 2,
+     "cur": 0.4,
+     "target": 0.4,
+     "scrolling": false,
+     "flying": false,
+     "motion": true,
+     "mode": "wide",
+     "breathT": 2.914166666666668,
+     "scrollY": 1076,
+     "step": 538
+    },
+    "gl": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+   }
+  },
+  "768x1024": {
+   "still": {
+    "visibleSmall": [
+     3
+    ],
+    "anchors": 3,
+    "problems": [],
+    "state": {
+     "active": 2,
+     "cur": 0.4,
+     "target": 0.4,
+     "scrolling": false,
+     "flying": false,
+     "motion": false,
+     "mode": "tall",
+     "breathT": 1.4,
+     "scrollY": 1434,
+     "step": 717
+    },
+    "gl": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+   },
+   "motion": {
+    "visibleSmall": [
+     3
+    ],
+    "anchors": 3,
+    "problems": [],
+    "state": {
+     "active": 2,
+     "cur": 0.4,
+     "target": 0.4,
+     "scrolling": false,
+     "flying": false,
+     "motion": true,
+     "mode": "tall",
+     "breathT": 2.813766666666668,
+     "scrollY": 1434,
+     "step": 717
+    },
+    "gl": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+   }
+  },
+  "390x844": {
+   "still": {
+    "visibleSmall": [
+     1,
+     3
+    ],
+    "anchors": 4,
+    "problems": [],
+    "state": {
+     "active": 2,
+     "cur": 0.4,
+     "target": 0.4,
+     "scrolling": false,
+     "flying": false,
+     "motion": false,
+     "mode": "phone",
+     "breathT": 1.4,
+     "scrollY": 1182,
+     "step": 591
+    },
+    "gl": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+   },
+   "motion": {
+    "visibleSmall": [
+     1,
+     3
+    ],
+    "anchors": 4,
+    "problems": [],
+    "state": {
+     "active": 2,
+     "cur": 0.4,
+     "target": 0.4,
+     "scrolling": false,
+     "flying": false,
+     "motion": true,
+     "mode": "phone",
+     "breathT": 3.1139666666666663,
+     "scrollY": 1182,
+     "step": 591
+    },
+    "gl": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)"
+   }
+  }
+ },
+ "selection": {
+  "wheel": [
+   {
+    "i": 0,
+    "active": 0,
+    "cur": 0,
+    "scrollY": 0,
+    "ok": true
+   },
+   {
+    "i": 1,
+    "active": 1,
+    "cur": 0.2,
+    "scrollY": 480,
+    "ok": true
+   },
+   {
+    "i": 2,
+    "active": 2,
+    "cur": 0.4,
+    "scrollY": 960,
+    "ok": true
+   },
+   {
+    "i": 3,
+    "active": 3,
+    "cur": 0.6,
+    "scrollY": 1560,
+    "ok": true
+   },
+   {
+    "i": 4,
+    "active": 4,
+    "cur": 0.8,
+    "scrollY": 2144,
+    "ok": true
+   },
+   {
+    "i": 5,
+    "active": 5,
+    "cur": 1,
+    "scrollY": 2690,
+    "ok": true
+   }
+  ],
+  "between": [
+   {
+    "frac": 0.4,
+    "active": 2,
+    "want": 2,
+    "ok": true,
+    "scrollY": 1291
+   },
+   {
+    "frac": 0.6,
+    "active": 3,
+    "want": 3,
+    "ok": true,
+    "scrollY": 1399
+   }
+  ],
+  "picker": [
+   {
+    "i": 5,
+    "active": 5,
+    "cur": 1,
+    "scrollY": 2690,
+    "focus": "active",
+    "ok": true
+   },
+   {
+    "i": 0,
+    "active": 0,
+    "cur": 0,
+    "scrollY": 0,
+    "focus": "active",
+    "ok": true
+   },
+   {
+    "i": 3,
+    "active": 3,
+    "cur": 0.6,
+    "scrollY": 1614,
+    "focus": "active",
+    "ok": true
+   },
+   {
+    "i": 1,
+    "active": 1,
+    "cur": 0.2,
+    "scrollY": 538,
+    "focus": "active",
+    "ok": true
+   },
+   {
+    "i": 4,
+    "active": 4,
+    "cur": 0.8,
+    "scrollY": 2152,
+    "focus": "active",
+    "ok": true
+   },
+   {
+    "i": 2,
+    "active": 2,
+    "cur": 0.4,
+    "scrollY": 1076,
+    "focus": "active",
+    "ok": true
+   }
+  ],
+  "pageNotScrolledByAnimation": true,
+  "arrowRightFrom2": 3,
+  "errors": []
+ },
+ "errors": {
+  "1920x1080": [],
+  "1440x900": [],
+  "1366x768": [],
+  "1024x768": [],
+  "768x1024": [],
+  "390x844": []
+ },
+ "ends": {
+  "1366x768-a0": {
+   "problems": [],
+   "visibleSmall": [
+    1
+   ],
+   "errors": []
+  },
+  "1366x768-a5": {
+   "problems": [],
+   "visibleSmall": [
+    3,
+    4
+   ],
+   "errors": []
+  },
+  "390x844-a0": {
+   "problems": [],
+   "visibleSmall": [
+    1
+   ],
+   "errors": []
+  },
+  "390x844-a5": {
+   "problems": [],
+   "visibleSmall": [
+    4
+   ],
+   "errors": []
+  }
+ },
+ "noWebGL": {
+  "cls": "wide no-webgl",
+  "links": 6
+ }
+}

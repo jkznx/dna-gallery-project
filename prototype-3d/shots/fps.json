@@ -1,0 +1,75 @@
+{
+ "gpu_finish_travel_frame": {
+  "n": 240,
+  "median_ms": 5.1,
+  "p95_ms": 8.7,
+  "max_ms": 12.7,
+  "fps_median": 196.1
+ },
+ "gpu_finish_breathing_frame": {
+  "n": 120,
+  "median_ms": 5.6,
+  "p95_ms": 8.3,
+  "max_ms": 9,
+  "fps_median": 178.6
+ },
+ "gpu": "ANGLE (Intel, Intel(R) UHD Graphics (0x0000A7A8) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+ "headless": true,
+ "rAF": {
+  "n": 180,
+  "median_ms": 6.9,
+  "p95_ms": 7.1,
+  "max_ms": 14.1,
+  "fps_median": 144.9
+ },
+ "breathing_render_interval": {
+  "n": 289,
+  "median_ms": 13.9,
+  "p95_ms": 14,
+  "max_ms": 14.1,
+  "fps_median": 71.9
+ },
+ "breathing_frame_cost": {
+  "n": 289,
+  "median_ms": 0.7,
+  "p95_ms": 1.1,
+  "max_ms": 1.2,
+  "fps_median": 1428.6
+ },
+ "geometry_update_cost": {
+  "n": 289,
+  "median_ms": 1.9,
+  "p95_ms": 2.7,
+  "max_ms": 3.5,
+  "fps_median": 526.3
+ },
+ "travel_render_interval": {
+  "n": 600,
+  "median_ms": 6.9,
+  "p95_ms": 7.2,
+  "max_ms": 14.1,
+  "fps_median": 144.9
+ },
+ "travel_frame_cost": {
+  "n": 600,
+  "median_ms": 0.5,
+  "p95_ms": 1.1,
+  "max_ms": 2.2,
+  "fps_median": 2000.0
+ },
+ "flight_render_interval": {
+  "n": 405,
+  "median_ms": 6.9,
+  "p95_ms": 7.1,
+  "max_ms": 7.4,
+  "fps_median": 144.9
+ },
+ "flight_frame_cost": {
+  "n": 481,
+  "median_ms": 0.6,
+  "p95_ms": 1.2,
+  "max_ms": 2.5,
+  "fps_median": 1666.7
+ },
+ "errors": []
+}

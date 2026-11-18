@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "description": "DNA Gallery 3D P1 prototype. Standalone; not part of the Next.js build. CommonJS so the UMD modules load under node --test.",
+  "type": "commonjs",
+  "scripts": {
+    "test": "node --test tests/"
+  }
+}
