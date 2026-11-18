@@ -2,9 +2,22 @@
 
 A 3D DNA-helix gallery: six artworks on liquid-ribbon strands. Built with Next.js, React and three.js.
 
-![DNA gallery — 3D helix view](docs/screenshot-desktop.png)
-
-<img src="docs/screenshot-phone.png" alt="DNA gallery on a phone" width="260">
+<table>
+  <tr>
+    <td valign="top" align="center">
+      <a href="docs/screenshot-desktop.png"><img src="docs/screenshot-desktop.png" alt="DNA gallery desktop view: Soft orbit selected on the 3D helix" width="380"></a><br>
+      <sub>Gallery — Soft orbit</sub>
+    </td>
+    <td valign="top" align="center">
+      <a href="docs/screenshot-detail.png"><img src="docs/screenshot-detail.png" alt="DNA gallery close-up with Little waves selected, showing the helix from another angle" width="380"></a><br>
+      <sub>Little waves selected</sub>
+    </td>
+    <td valign="top" align="center">
+      <a href="docs/screenshot-phone.png"><img src="docs/screenshot-phone.png" alt="DNA gallery on a phone" width="180"></a><br>
+      <sub>On a phone</sub>
+    </td>
+  </tr>
+</table>
 
 
 ## 3D DNA gallery (P2) — 18 November 2026
