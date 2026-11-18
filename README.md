@@ -1,5 +1,11 @@
 # DNA gallery — local MVP
 
+A 3D DNA-helix gallery: six artworks on liquid-ribbon strands. Built with Next.js, React and three.js.
+
+![DNA gallery — 3D helix view](docs/screenshot-desktop.png)
+
+<img src="docs/screenshot-phone.png" alt="DNA gallery on a phone" width="260">
+
 
 ## 3D DNA gallery (P2) — 18 November 2026
 
