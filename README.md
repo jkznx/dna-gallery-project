@@ -116,3 +116,9 @@ Publication state and inventory/rights workflow fields are intentionally deferre
 Final DNA interpretation and mobile treatment; typography and ink approval; actual assets and rights; captions/alt text and interface language; content ownership and editing/publishing workflow; public/private access; original-download policy. No admin, upload screen, fake authentication, Supabase integration, credentials or production release is included. Deployment requires a separate authorization and security review of the chosen workflow.
 
 Dependencies are pinned in package.json and package-lock.json. Only Next.js, React, TypeScript and their type declarations were added. npm audit reported zero known vulnerabilities at installation; this is not a guarantee about future deployment safety.
+
+## License
+
+- The code is released under the MIT License (see [LICENSE](LICENSE)).
+- The fonts in `src/fonts` keep their own SIL Open Font Licenses; the licence files sit next to them.
+- The six sample images in `public/samples` are original generated sample artwork included for demonstration.
